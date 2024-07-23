@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Tel</title>
+    <link rel="stylesheet" href="lib/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+    <script src="cordova.js"></script>
+    <script src="js/index.js"></script>
+
+</head>
+<body>
+    <!--
+        Home Page
+    -->
+    <div id="homePage" data-role = "page">
+        <div data-role = "header">
+            <h1>Contact Tel</h1>
+        </div>
+        <div role = "main" class="ui-content">
+            <a href="#addContactPage" data-role="button" data-icon="plus">Ajouter</a>
+            <ul id="contactList" data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Recherche contact...">
+                <li>
+                    <a href="#contactDetailsPage">
+                        <img src="img/avatar.png">
+                        <h2>Achetou Noura</h2>
+                        <p>70 778 98 67</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contactDetailsPage">
+                        <img src="img/1.jpg.png">
+                        <h2>Mamadou Fall</h2>
+                        <p>76 397 98 24</p>
+                    </a>
+                </li> 
+                <li>
+                    <a href="#contactDetailsPage">
+                        <img src="img/images-11.jpeg">
+                        <h2>Ady Sarr</h2>
+                        <p>77 778 72 76</p>
+                    </a>
+                </li> 
+            </ul>
+        </div>
+        <div data-role = "footer" data-position="fixed">
+            <h1>M1IA &copy; 2024</h1>
+        </div>
+        
+    </div>
+    <!--
+        Add Page
+    -->
+    <div id="addContactPage" data-role = "page">
+        <div data-role = "header">
+            <a href="#homePage" data-icon="home">Home</a>
+            <h1>Contact Tel</h1>
+        </div>
+        <div role = "main" class="ui-content">
+            <div data-role = "header">
+                <h1>Contact Detail</h1>
+            </div>
+            <form>
+                <label for="prenom">Prenom</label>
+                <input type="text" id="prenom">
+                <label for="nom">Nom</label>
+                <input type="text" id="nom">
+                <label for="telephone">Telephone</label>
+                <input type="tel" id="telephine">
+                <label for="email">Email</label>
+                <input type="tel" id="email">
+                <input type="button" id="saveContact" value="Ajouter">
+        
+            </form>
+        </div>
+        <div data-role = "footer" data-position="fixed">
+            <h1>M1IA &copy; 2024</h1>
+        </div>
+    </div>
+     <!-- Contact Details Page -->
+    <div id="contactDetailsPage" data-role="page">
+        <div data-role="header">
+            <a href="#homePage" data-icon="home">Home</a>
+            <h1>Détails du Contact</h1>
+        </div>
+        <div role="main" class="ui-content">
+            <h2 id="contactName"></h2>
+            <p id="contactPhone"></p>
+            <p id="contactEmail"></p>
+            <a href="#addContactPage" data-role="button" data-icon="edit" id="editContactButton">Éditer</a>
+            <a href="#" data-role="button" data-icon="delete" id="deleteContactButton">Supprimer</a>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h1>M1IA &copy; 2024</h1>
+        </div>
+    </div>
+</body>
+</html>
